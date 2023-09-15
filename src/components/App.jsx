@@ -22,7 +22,7 @@ export const App = () => {
  };
    
  const handleLoadMore = () => {
-  setPage(prevState => page + 1)
+  setPage(page + 1)
 }
 
 const handleOpenModal = (img) => {
@@ -50,9 +50,8 @@ useEffect(() =>  {
         this.setState({ isLoading: false });
       });
     
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [query, page])
-
-console.log(images);
 
   return(
     <Body>
